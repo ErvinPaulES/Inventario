@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Servicio de Articulos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="" />    
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Registro de Articulos</h1>
+    </div>
+    <div class="container-fluid mx-auto">
+        <div class="row">
+                    <form id="form" class="col-4 m-5  border needs-validation mx-auto" novalidate>
+                        <h1>Articulos</h1>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Codigo:</span>
+                            </div>
+                            <input type="text" class="form-control" id="codigo" placeholder="1" aria-describedby="basic-addon1" required>
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Este campo es obligatorio</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Nombre:</span>
+                            </div>
+                            <input type="text" class="form-control" id="nombre" placeholder="Leche" aria-describedby="basic-addon1" required>
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Este campo es obligatorio</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Precio:</span>
+                            </div>
+                            <input type="number" class="form-control" id="precio" placeholder="$15" aria-describedby="basic-addon1" required>
+                            <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Este campo es obligatorio</div>
+                        </div>
+                         <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Cantidad:</span>
+                            </div>
+                             <input type="number" class="form-control" id="cantidad" placeholder="12" aria-describedby="basic-addon1" required>
+                             <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Este campo es obligatorio</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Descripción:</span>
+                            </div>
+                             <input type="text" class="form-control" id="descripcion" placeholder="Lacteo" aria-describedby="basic-addon1" required>
+                             <div class="valid-feedback">Correcto</div>
+                            <div class="invalid-feedback">Este campo es obligatorio</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Indice: (Opcional)</span>
+                            </div>
+                             <input type="number" class="form-control" id="indice" placeholder="1" aria-describedby="basic-addon1">
+                        </div>
+                        <button type="button" class="btn mb-3 btn-primary center-block" id="agregar">Agregar</button>
+                    </form>
+        </div>
+        <div class="row">
+            <div class="col-md-7 mx-auto">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Buscar:</span>
+                    </div>
+                    <input type="text" class="form-control" id="buscador" placeholder="Leche" aria-describedby="basic-addon1">
+                    <button type="button" class="btn mb-3 btn-primary center-block" id="buscar">Buscar</button>
+                </div>
+                <button type="button" class="btn mb-3 btn-primary center-block" id="Mostrar">Mostrar Reporte</button>   
+                <table id="registro" class="table">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body"></tbody>
+                </table>
+                <br>
+                <div id="Reporte">
+                    <h3>Reporte</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<script src="./Main.js" type="module"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+</html>
